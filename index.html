@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Мой Маркет — идиш-аяк, бытовая техника, казан-кастрюль жана үй тиричилик буюмдары. Жибек-Жолу 235.">
+<title>Мой Маркет | Жибек-Жолу 235</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top">🔥 Мой Маркет — үйүңүзгө керектүүнүн баары бир жерде!</div>
+<header>
+  <div class="nav">
+    <a class="brand" href="#">
+      <img src="logo.jpg" alt="Мой Маркет логотиби">
+    </a>
+    <div class="search"><span>⌕</span><input id="search" placeholder="Товар издөө..."></div>
+    <button class="cartButton" onclick="toggleCart()">🛒 <span>Себет</span> <b id="count">0</b></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="heroGlow"></div>
+  <div class="heroContent">
+    <div class="heroText">
+      <div class="badge">МОЙ МАРКЕТ • БИШКЕК</div>
+      <h1>Үйгө керектүүнүн<br><strong>баары бир жерде.</strong></h1>
+      <p>Идиш-аяк • Конфетницалар • Бытовая техника • Казан-кастрюль • Үй тиричилик буюмдары</p>
+      <div class="heroBtns">
+        <a href="#catalog" class="btn orange">Каталогду көрүү</a>
+        <a href="#contact" class="btn ghost">Биз жөнүндө</a>
+      </div>
+      <div class="miniStats"><span>✓ Жеткиликтүү баалар</span><span>✓ Кең тандоо</span><span>✓ Жакшы тейлөө</span></div>
+    </div>
+    <div class="heroLogo"><img src="logo.jpg" alt="Мой Маркет"></div>
+  </div>
+</section>
+
+<section id="catalog" class="catalog wrap">
+  <div class="sectionTitle">
+    <div><small>БИЗДИН ТОВАРЛАР</small><h2>Популярдуу категориялар</h2></div>
+    <div id="categories" class="categories"></div>
+  </div>
+  <div id="products" class="grid"></div>
+</section>
+
+<section id="contact" class="contact wrap">
+  <div><small>📍 БИЗДИН ДАРЕК</small><h2>Мой Маркет</h2><p>Жибек-Жолу 235, Бишкек</p></div>
+  <div class="contactCards"><div>📍<b>Дарек</b><span>Жибек-Жолу 235</span></div><div>💬<b>Заказ</b><span>WhatsApp аркылуу</span></div><div>🛍️<b>Тандоо</b><span>Үйгө керектүүнүн баары</span></div></div>
+</section>
+
+<footer><div class="wrap"><div class="footerBrand">МОЙ<span>МАРКЕТ</span></div><p>Жибек-Жолу 235 • Бишкек</p><small>© 2026 Мой Маркет. Бардык укуктар корголгон.</small></div></footer>
+
+<div id="shade" class="shade" onclick="toggleCart()"></div>
+<aside id="cart" class="drawer">
+  <button class="x" onclick="toggleCart()">×</button>
+  <h2>Сиздин себет</h2>
+  <div id="items"></div>
+  <div class="sum">Жалпы: <strong><span id="total">0</span> сом</strong></div>
+  <form id="order">
+    <input id="customer" required placeholder="Атыңыз">
+    <input id="phone" required placeholder="Телефон номериңиз">
+    <textarea id="note" placeholder="Кошумча маалымат"></textarea>
+    <button class="btn orange full">WhatsApp аркылуу заказ берүү</button>
+  </form>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>
