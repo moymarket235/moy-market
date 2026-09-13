@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Мой Маркет — идиш-аяк, бытовая техника, казан-кастрюль жана үй тиричилик буюмдары. Жибек-Жолу 235.">
-<title>Мой Маркет | Жибек-Жолу 235</title>
+<meta name="description" content="Мой Маркет — идиш-аяк, конфетницалар, бытовая техника, казан-кастрюль жана үй тиричилик буюмдары. Жибек-Жолу 235, Бишкек.">
+<meta name="theme-color" content="#ff9d00">
+<title>Мой Маркет | Интернет-дүкөн</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="top">🔥 Мой Маркет — үйүңүзгө керектүүнүн баары бир жерде!</div>
+
 <header>
-  <div class="nav">
-    <a class="brand" href="#">
-      <img src="logo.jpg" alt="Мой Маркет логотиби">
-    </a>
-    <div class="search"><span>⌕</span><input id="search" placeholder="Товар издөө..."></div>
+  <div class="nav wrap">
+    <a class="brand" href="#"><img src="logo.jpg" alt="Мой Маркет"></a>
+    <div class="search"><span>⌕</span><input id="search" placeholder="Товар издөө..." autocomplete="off"></div>
     <button class="cartButton" onclick="toggleCart()">🛒 <span>Себет</span> <b id="count">0</b></button>
   </div>
 </header>
 
 <section class="hero">
   <div class="heroGlow"></div>
-  <div class="heroContent">
+  <div class="heroContent wrap">
     <div class="heroText">
       <div class="badge">МОЙ МАРКЕТ • БИШКЕК</div>
       <h1>Үйгө керектүүнүн<br><strong>баары бир жерде.</strong></h1>
@@ -32,38 +32,54 @@
       </div>
       <div class="miniStats"><span>✓ Жеткиликтүү баалар</span><span>✓ Кең тандоо</span><span>✓ Жакшы тейлөө</span></div>
     </div>
-    <div class="heroLogo"><img src="logo.jpg" alt="Мой Маркет"></div>
+    <div class="heroLogo"><img src="logo.jpg" alt="Мой Маркет логотиби"></div>
   </div>
 </section>
 
 <section id="catalog" class="catalog wrap">
   <div class="sectionTitle">
-    <div><small>БИЗДИН ТОВАРЛАР</small><h2>Популярдуу категориялар</h2></div>
+    <div><small>БИЗДИН ТОВАРЛАР</small><h2>Каталог</h2></div>
     <div id="categories" class="categories"></div>
   </div>
   <div id="products" class="grid"></div>
 </section>
 
+<section class="why wrap">
+  <div class="whyCard"><span>💰</span><b>Жеткиликтүү баалар</b><small>Ар түрдүү бюджетке ылайыктуу</small></div>
+  <div class="whyCard"><span>🛍️</span><b>Кең ассортимент</b><small>Үйгө керектүүнүн баары бир жерде</small></div>
+  <div class="whyCard"><span>💬</span><b>Ыңгайлуу заказ</b><small>WhatsApp аркылуу тез заказ бериңиз</small></div>
+</section>
+
 <section id="contact" class="contact wrap">
-  <div><small>📍 БИЗДИН ДАРЕК</small><h2>Мой Маркет</h2><p>Жибек-Жолу 235, Бишкек</p></div>
-  <div class="contactCards"><div>📍<b>Дарек</b><span>Жибек-Жолу 235</span></div><div>💬<b>Заказ</b><span>WhatsApp аркылуу</span></div><div>🛍️<b>Тандоо</b><span>Үйгө керектүүнүн баары</span></div></div>
+  <div><small>📍 БИЗДИН ДАРЕК</small><h2>Мой Маркет</h2><p>Жибек-Жолу 235, Бишкек</p>
+    <a class="whatsappLink" href="https://wa.me/996507668866" target="_blank" rel="noopener">💬 WhatsApp: +996 507 66 88 66</a>
+  </div>
+  <div class="contactCards">
+    <div>📍<b>Дарек</b><span>Жибек-Жолу 235</span></div>
+    <div>💬<b>Заказ</b><span>+996 507 66 88 66</span></div>
+    <div>🛍️<b>Тандоо</b><span>Үйгө керектүүнүн баары</span></div>
+  </div>
 </section>
 
 <footer><div class="wrap"><div class="footerBrand">МОЙ<span>МАРКЕТ</span></div><p>Жибек-Жолу 235 • Бишкек</p><small>© 2026 Мой Маркет. Бардык укуктар корголгон.</small></div></footer>
 
+<a class="floatWA" href="https://wa.me/996507668866" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
 <div id="shade" class="shade" onclick="toggleCart()"></div>
 <aside id="cart" class="drawer">
   <button class="x" onclick="toggleCart()">×</button>
-  <h2>Сиздин себет</h2>
+  <h2>🛒 Сиздин себет</h2>
   <div id="items"></div>
   <div class="sum">Жалпы: <strong><span id="total">0</span> сом</strong></div>
   <form id="order">
     <input id="customer" required placeholder="Атыңыз">
     <input id="phone" required placeholder="Телефон номериңиз">
     <textarea id="note" placeholder="Кошумча маалымат"></textarea>
-    <button class="btn orange full">WhatsApp аркылуу заказ берүү</button>
+    <button type="submit" class="btn orange full">WhatsApp аркылуу заказ берүү</button>
   </form>
+  <p class="orderHint">Заказ WhatsApp номерине жөнөтүлөт: <b>+996 507 66 88 66</b></p>
 </aside>
+
 <script src="script.js"></script>
 </body>
 </html>
